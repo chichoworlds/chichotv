@@ -4,10 +4,6 @@
 	"dependencies":{
 		"socket.io":"*",
 		"express":"*",
-		"log":"*",
-		"ejs":"*"
-	},
-	"engines":{
-		"node":"*"
-	},
+		"log":"*"
+	}
 }
