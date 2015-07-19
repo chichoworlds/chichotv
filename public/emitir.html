@@ -8,7 +8,6 @@
 </head>
 <body>
 	<video src="" id="video" style="width:680px;height:320px" autoplay="true"></video>
-	<audio src="" id="audio"></audio>
 	<canvas style="display:none;" id="preview"></canvas>
 	<div id="logger"></div>
 	<script type="text/javascript">
@@ -22,7 +21,6 @@
 	context.height = canvas.height;
 
 	var video = document.getElementById("video");
-	var audio = document.getElementById("audio");
 
 	var socket = io();
 	function logger(msg)
@@ -32,7 +30,6 @@
 	function loadCam(stream)
 	{
 		video.src = window.URL.createObjectURL(stream);
-		audio.src = window.URL.createObjectURL(stream);
 		logger('Camara cargada re PIOLITA!');
 
 
@@ -44,7 +41,7 @@
 	function viewVideo(video,context)
 	{
 		context.drawImage(video,0,0,context.width,context.height);
-		socket.emit('stream',canvas.toDataURL('image/webp'));
+		socket.emit('stream',canvas.toDataURL('image/jpg'));
 
 	}
 	$(function(){
