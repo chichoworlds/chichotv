@@ -62,19 +62,21 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <video  autoplay loop controls width="100%" height="100%">
+    <video  autoplay loop controls width="100%" height="100%" autobuffer>
     	<source src="video/graph1.mp4" type="video/mp4">
     	Tu navegador no soporta el elemento Video.
     </video>
-	<audio autoplay loop>
-	  <source src="/video/1.mp3" type="audio/mpeg">
+	<audio autoplay loop id="audioPlayer" autobuffer>
 	  <source src="/video/2.mp3" type="audio/mpeg">
-	  <source src="/video/3.mp3" type="audio/mpeg">
-	  <source src="/video/4.mp3" type="audio/mpeg">
-	  <source src="/video/5.mp3" type="audio/mpeg">
-	  <source src="/video/6.mp3" type="audio/mpeg">
 	Tu navegador no soporta el elemento Audio.
 	</audio> 
+	<script type="text/javascript">
+		var nextAudio = "video/3.mp3";
+		var audioPlayer = document.getElementById('audioPlayer');
+		audioPlayer.onended = function(){
+		    audioPlayer.src = nextAudio;
+		}
+	</script>
 <!--video src="video/graph1.mp4" width="100%" loop controls></video-->  
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
