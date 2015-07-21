@@ -32,6 +32,15 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+
+    <script type="text/javascript">
+		var nextAudio = "/video/6.mp3";
+		var audioPlayer = document.getElementById('audioPlayer');
+		audioPlayer.onended = function(){
+		    audioPlayer.src = nextAudio;
+		}
+	</script>
+
 </head>
 
 <body id="page-top">
@@ -66,18 +75,10 @@
     	<source src="video/graph1.mp4" type="video/mp4">
     	Tu navegador no soporta el elemento Video.
     </video>
-    <audio src="/video/4.mp3" autoplay autobuffer loop id="audioPlayer"></audio>
-	<!--audio autoplay autobuffer>
-	  <source id="audioPlayer" src="/video/5.mp3" type="audio/mpeg">
+	<audio autoplay autobuffer>
+	  <source id="audioPlayer" src="/video/4.mp3" type="audio/mpeg">
 	Tu navegador no soporta el elemento Audio.
-	</audio--> 
-	<script type="text/javascript">
-		var nextAudio = "/video/5.mp3";
-		var audioPlayer = document.getElementById('audioPlayer');
-		audioPlayer.onended = function(){
-		    audioPlayer.src = nextAudio;
-		}
-	</script>
+	</audio> 
 <!--video src="video/graph1.mp4" width="100%" loop controls></video-->  
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -92,13 +93,7 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
-    	<script type="text/javascript">
-		var nextAudio = "/video/6.mp3";
-		var audioPlayer = document.getElementById('audioPlayer');
-		audioPlayer.onended = function(){
-		    audioPlayer.src = nextAudio;
-		}
-	</script>
+
 
 </body>
 
