@@ -66,12 +66,12 @@
     	<source src="video/graph1.mp4" type="video/mp4">
     	Tu navegador no soporta el elemento Video.
     </video>
-	<audio autoplay loop autobuffer>
+	<audio autoplay autobuffer>
 	  <source id="audioPlayer" src="/video/4.mp3" type="audio/mpeg">
 	Tu navegador no soporta el elemento Audio.
 	</audio> 
 	<script type="text/javascript">
-		var nextAudio = "video/5.mp3";
+		var nextAudio = "/video/5.mp3";
 		var audioPlayer = document.getElementById('audioPlayer');
 		audioPlayer.onended = function(){
 		    audioPlayer.src = nextAudio;
@@ -91,6 +91,13 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    	<script type="text/javascript">
+		var nextAudio = "/video/5.mp3";
+		var audioPlayer = document.getElementById('audioPlayer');
+		audioPlayer.onended = function(){
+		    audioPlayer.src = nextAudio;
+		}
+	</script>
 
 </body>
 
