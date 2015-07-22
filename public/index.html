@@ -93,11 +93,11 @@ var nextSong= "";
 function setup() {
     document.getElementById('audio').addEventListener('ended', function(){
         i++
-        nextSong = "Music/"+i+".mp3";
+        nextSong = "video/"+i+".mp3";
         audioPlayer.src = nextSong;
         audioPLayer.load();
         audioPlayer.play();
-        if(i == 37) // this is the end of the songs.
+        if(i == 6) // this is the end of the songs.
         {
             i = 1;
         }
@@ -105,7 +105,7 @@ function setup() {
 }
 </script>
 
-<audio id="audio"  src="Music/1.mp3"controls="controls" autoplay="autoplay"   align=""> </audio>
+<audio id="audio"  src="video/1.mp3"controls="controls" autoplay="autoplay"   align=""> </audio>
 
 
 </body>
