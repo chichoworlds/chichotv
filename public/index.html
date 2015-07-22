@@ -67,20 +67,9 @@
     	Tu navegador no soporta el elemento Video.
     </video>
 	<audio autoplay loop autobuffer id="audioPlayer">
-	  <source src="/video/5.mp3" type="audio/mpeg">
+	  <source src="/video/3.mp3" type="audio/mpeg">
 	Tu navegador no soporta el elemento Audio.
 	</audio> 
-    <script type="text/javascript">
-    var aud = document.getElementById("audioPlayer");
-    aud.onended = function() {
-        alert("The audio has ended");
-    };
-        /*var nextAudio = "/video/6.mp3";
-        var audioPlayer = document.getElementById('audioPlayer');
-        audioPlayer.onended = function(){
-            audioPlayer.src = nextAudio;
-        }*/
-    </script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -94,6 +83,17 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
+    <script type="text/javascript">
+        var aud = document.getElementById("audioPlayer");
+        aud.onended = function() {
+            alert("The audio has ended");
+        };
+            /*var nextAudio = "/video/6.mp3";
+            var audioPlayer = document.getElementById('audioPlayer');
+            audioPlayer.onended = function(){
+                audioPlayer.src = nextAudio;
+            }*/
+    </script>
 
 
 </body>
