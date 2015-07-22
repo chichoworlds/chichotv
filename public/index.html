@@ -62,12 +62,12 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <video  autoplay loop controls width="100%" height="100%" autobuffer>
+    <!--video  autoplay loop controls width="100%" height="100%" autobuffer>
     	<source src="video/graph1.mp4" type="video/mp4">
     	Tu navegador no soporta el elemento Video.
-    </video>
-	<audio autoplay loop autobuffer id="audioPlayer">
-	  <source src="/video/3.mp3" type="audio/mpeg">
+    </video-->
+	<audio autoplay loop autobuffer>
+	  <source src="/video/2.mp3"  id="audioPlayer" type="audio/mpeg">
 	Tu navegador no soporta el elemento Audio.
 	</audio> 
     <!-- jQuery -->
@@ -86,7 +86,7 @@
     <script type="text/javascript">
         var aud = document.getElementById("audioPlayer");
         aud.onended = function() {
-            alert("The audio has ended");
+            aud.src="/video/1.mp3";
         };
             /*var nextAudio = "/video/6.mp3";
             var audioPlayer = document.getElementById('audioPlayer');
