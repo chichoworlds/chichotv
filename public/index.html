@@ -32,15 +32,6 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-
-    <script type="text/javascript">
-		var nextAudio = "/video/6.mp3";
-		var audioPlayer = document.getElementById('audioPlayer');
-		audioPlayer.onended = function(){
-		    audioPlayer.src = nextAudio;
-		}
-	</script>
-
 </head>
 
 <body id="page-top">
@@ -79,7 +70,13 @@
 	  <source id="audioPlayer" src="/video/4.mp3" type="audio/mpeg">
 	Tu navegador no soporta el elemento Audio.
 	</audio> 
-<!--video src="video/graph1.mp4" width="100%" loop controls></video-->  
+        <script type="text/javascript">
+        var nextAudio = "/video/6.mp3";
+        var audioPlayer = document.getElementById('audioPlayer');
+        audioPlayer.onended = function(){
+            audioPlayer.src = nextAudio;
+        }
+    </script>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
