@@ -25,24 +25,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
-    <script type="text/javascript">
 
-var i=1;
-var nextSong= "";
-function setup() {
-    document.getElementById('audio').addEventListener('ended', function(){
-        i++
-        nextSong = "Music/"+i+".mp3";
-        audioPlayer.src = nextSong;
-        audioPLayer.load();
-        audioPlayer.play();
-        if(i == 37) // this is the end of the songs.
-        {
-            i = 1;
-        }
-        }, false);
-}
-</script>
 
      
 
@@ -103,8 +86,24 @@ function setup() {
     <script src="js/creative.js"></script>
 
 
+         <script type="text/javascript">
 
-     <!--FIN REPRODUCTOR DE AUDIO-->
+var i=1;
+var nextSong= "";
+function setup() {
+    document.getElementById('audio').addEventListener('ended', function(){
+        i++
+        nextSong = "Music/"+i+".mp3";
+        audioPlayer.src = nextSong;
+        audioPLayer.load();
+        audioPlayer.play();
+        if(i == 37) // this is the end of the songs.
+        {
+            i = 1;
+        }
+        }, false);
+}
+</script>
 
 <audio id="audio"  src="Music/1.mp3"controls="controls" autoplay="autoplay"   align=""> </audio>
 
