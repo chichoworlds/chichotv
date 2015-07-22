@@ -25,12 +25,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
-    <script>
-    function audioEnded() {
-        alert('audio ended');
-    }
-    </script>
-
 
      
 
@@ -75,7 +69,8 @@
     	<source src="video/graph1.mp4" type="video/mp4">
     	Tu navegador no soporta el elemento Video.
     </video-->
-    <audio src="video/4.mp3" autoplay="autoplay" onended="audioEnded()"> </audio>
+    <audio id="cuatro" src="video/4.mp3" autoplay="autoplay" onended="playSeis()"> </audio>
+    <audio id="seis" src="video/6.mp3" onended="playCuatro()"> </audio>
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -90,9 +85,24 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
 
+    <script>
+    /*function audioEnded() {
+        alert('audio ended');
+    }*/
+    var cuatro = document.getElementById("cuatro"); 
+    var seis = document.getElementById("seis"); 
 
-    <script type="text/javascript">
+    function playCuatro() { 
+        cuatro.play(); 
+    }
 
+    function playSeis() { 
+        seis.play(); 
+    } 
+
+    /*function pauseAud() { 
+        auwwd.pause(); 
+    }*/
     </script>
 
 </body>
