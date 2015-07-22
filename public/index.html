@@ -25,6 +25,25 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
 
+    <script type="text/javascript">
+
+var i=1;
+var nextSong= "";
+function setup() {
+    document.getElementById('audio').addEventListener('ended', function(){
+        i++
+        nextSong = "Music/"+i+".mp3";
+        audioPlayer.src = nextSong;
+        audioPLayer.load();
+        audioPlayer.play();
+        if(i == 37) // this is the end of the songs.
+        {
+            i = 1;
+        }
+        }, false);
+}
+</script>
+
      
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -36,7 +55,7 @@
 
 </head>
 
-<body id="page-top">
+<body id="page-top" onLoad="setup();">
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
@@ -86,6 +105,8 @@
 
 
      <!--FIN REPRODUCTOR DE AUDIO-->
+
+<audio id="audio"  src="Music/1.mp3"controls="controls" autoplay="autoplay"   align=""> </audio>
 
 
 </body>
