@@ -1,3 +1,4 @@
+<?php include('/includes/path.php');?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,7 +26,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
         <!-- MIS JS -->
-    <script src="nucleo.js"></script>
+    <script src="/includes/nucleo.js"></script>
      
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
