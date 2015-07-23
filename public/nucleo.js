@@ -20,7 +20,7 @@ function eliminar(padre, nomId){
 var indice = 1; // PARA NOMBRE DE ARCHIVOS
 
 function playList(idViejo,inicio,fin) {
-		if (inicio==fin) {
+		if (indice==fin) {
 			eliminar("div1",idViejo);
 		}else{
 			eliminar("div1",idViejo);
