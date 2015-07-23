@@ -26,8 +26,9 @@ function playList(idViejo,inicio,fin) {
 			crear("div1","audio",idViejo,"video/"+inicio+".mp3","playList("+"'"+idViejo+"'"+","+inicio+","+fin+");");
 			var track = document.getElementById(idViejo);
 			track.play();
+			inicio++;
 		};
-		inicio++;
+		
 }
 /* END LIST */
 
