@@ -29,10 +29,7 @@ function playList(idViejo,inicio,fin) {
 			track.play();
 			if(indice<fin){
 				indice++;
-			}else{
-				indice=0;
-			}
-			
+			}			
 		};
 		
 }
