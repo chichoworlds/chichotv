@@ -1,7 +1,7 @@
 /* MANAGE DOMS */
 function crear(padre,hijo,nomId,ruta,fin){
    	var child = document.createElement(hijo);
-   	child.setAttribute("controls", "controls");
+   	//child.setAttribute("controls", "controls");
 	child.setAttribute("id", nomId);
 	child.setAttribute("src", ruta);
 	child.setAttribute("onended", fin);
