@@ -20,18 +20,15 @@ function eliminar(padre, nomId){
 var indice = 1; // PARA NOMBRE DE ARCHIVOS
 
 function playList(idViejo,inicio,fin) {
-		if (indice==fin) {
-			eliminar("div1",idViejo);
-		}else{
-			eliminar("div1",idViejo);
-			crear("div1","audio",idViejo,"video/"+indice+".mp3","playList("+"'"+idViejo+"'"+","+inicio+","+fin+");");
-			var track = document.getElementById(idViejo);
-			track.play();
-			if(indice<fin){
-				indice++;
-			}			
-		};
-		
+	if(indice<fin){
+		eliminar("div1",idViejo);
+		crear("div1","audio",idViejo,"video/"+indice+".mp3","playList("+"'"+idViejo+"'"+","+inicio+","+fin+");");
+		var track = document.getElementById(idViejo);
+		track.play();
+		indice++;
+	}else{
+		eliminar("div1",idViejo);
+	}			
 }
 /* END LIST */
 
