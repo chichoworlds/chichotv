@@ -24,6 +24,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/creative.css" type="text/css">
+        <!-- MIS JS -->
+    <script src="nucleo.js"></script>
      
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -38,7 +40,7 @@
 <body id="page-top">
 
 <div id="div1">
-
+    <audio id="cuatro" src="video/4.mp3" autoplay="autoplay" onended="playList('cuatro',1,6);"> </audio>
 </div>
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
@@ -71,7 +73,6 @@
     	<source src="video/graph1.mp4" type="video/mp4">
     	Tu navegador no soporta el elemento Video.
     </video>
-    <!--audio id="cuatro" src="video/1.mp3" autoplay="autoplay" onended="playList()"> </audio-->
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
@@ -86,26 +87,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/creative.js"></script>
 
-    <!-- MIS JS -->
-    <script src="manager.js"></script>
-    <script>
 
-    /*function audioEnded() {
-        alert('audio ended');
-    }
-
-    function playList() {
-        track.play(); 
-    }
-
-    function playSeis() { 
-        seis.play(); 
-    } 
-
-    function pauseAud() { 
-        auwwd.pause(); 
-    }*/
-    </script>
 
 </body>
 
