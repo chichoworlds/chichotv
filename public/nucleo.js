@@ -23,8 +23,8 @@ function playList(idViejo,inicio,fin) {
 			eliminar("div1",idViejo);
 		}else{
 			eliminar("div1",idViejo);
-			crear("div1","audio",idViejo+inicio,"video/"+inicio+".mp3","playList("+idViejo+inicio+1+","+inicio+","+fin+");");
-			var track = document.getElementById(idViejo+inicio);
+			crear("div1","audio",idViejo,"video/"+inicio+".mp3","playList("+String(idViejo)+","+inicio+","+fin+");");
+			var track = document.getElementById(idViejo);
 			track.play();
 		};
 		inicio++;
