@@ -16,17 +16,18 @@ function eliminar(padre, nomId){
 }
 /* END MANAGE DOMS */
 
-
 /* LIST */
+var indice = 1; // PARA NOMBRE DE ARCHIVOS
+
 function playList(idViejo,inicio,fin) {
 		if (inicio==fin) {
 			eliminar("div1",idViejo);
 		}else{
 			eliminar("div1",idViejo);
-			crear("div1","audio",idViejo,"video/"+inicio+".mp3","playList("+"'"+idViejo+"'"+","+inicio+","+fin+");");
+			crear("div1","audio",idViejo,"video/"+indice+".mp3","playList("+"'"+idViejo+"'"+","+inicio+","+fin+");");
 			var track = document.getElementById(idViejo);
 			track.play();
-			inicio++;
+			indice++;
 		};
 		
 }
