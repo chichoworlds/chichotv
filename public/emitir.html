@@ -41,7 +41,7 @@
 	function viewVideo(video,context)
 	{
 		context.drawImage(video,0,0,context.width,context.height);
-		socket.emit('stream',window.URL.createObjectURL(stream)); //canvas.toDataURL('image/jpg')
+		socket.emit('stream',video.src); //canvas.toDataURL('image/jpg')
 
 	}
 	$(function(){
