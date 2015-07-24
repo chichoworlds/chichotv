@@ -41,7 +41,7 @@
 	function viewVideo(video,context)
 	{
 		context.drawImage(video,0,0,context.width,context.height);
-		socket.emit('stream',canvas.toDataURL('image/gif',0.2)); //
+		socket.emit('stream',canvas.toDataURL('image/jpeg',0.2)); //
 
 	}
 	$(function(){
