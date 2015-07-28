@@ -5,6 +5,15 @@
 	<title>VER VIDEO!</title>
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript"src="/socket.io/socket.io.js"></script>
+	<script>
+		imprimir();
+		function imprimir(){
+			var i=0;
+			var dat_cliente = document.getElementById("play_");
+			dat_cliente.innerHTML = i;
+			i++;
+		}
+	</script>
 </head>
 <body>
 	<!--video src="" id="play"></video-->
@@ -14,10 +23,6 @@
 	<!--div id="logger"></div-->
 
 	<script>
-		var i=0;
-		var dat_cliente = document.getElementById("play_");
-		dat_cliente.innerHTML = i;
-		i++;
 		var socket=io();
 		socket.on('stream',function(data){
 			var dat = document.getElementById("play");
