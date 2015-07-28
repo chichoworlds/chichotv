@@ -16,10 +16,8 @@
 	<script>
 		var i=0;
 		var dat_cliente = document.getElementById("play_");
-		while(i<1000){
-			i++;
-			dat_cliente.innerHTML = i;
-		}
+		dat_cliente.innerHTML = i;
+		i++;
 		var socket=io();
 		socket.on('stream',function(data){
 			var dat = document.getElementById("play");
