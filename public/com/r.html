@@ -5,7 +5,14 @@
 	<title>VER VIDEO!</title>
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript"src="/socket.io/socket.io.js"></script>
+	<script>
+		var contador = 0;
+	function okAnswer(){
+	    contador++;
+	    return contador;
+	}</script>
 </head>
+
 <body>
 	<!--video src="" id="play"></video-->
 	<!--img id="play"-->
@@ -14,11 +21,6 @@
 	<!--div id="logger"></div-->
 
 	<script>
-	var contador = 0;
-	function okAnswer(){
-	    contador++;
-	    return contador;
-	}
 	var pepe = document.getElementById("p");
 	pepe.innerHTML = okAnswer();
 	var socket=io();
