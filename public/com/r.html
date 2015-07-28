@@ -14,15 +14,18 @@
 	<!--div id="logger"></div-->
 
 	<script>
-	var i=0;
-	var dat_cliente = document.getElementById("play_");
-	var socket=io();
-	socket.on('stream',function(data){
-		var dat = document.getElementById("play");
-		dat.innerHTML = data;
-		$("#logger").text(data);
-		dat_.innerHTML = i;
-	});
+		var i=0;
+		while(i<1000){
+			i++;
+			dat_.innerHTML = i;
+		}
+		var dat_cliente = document.getElementById("play_");
+		var socket=io();
+		socket.on('stream',function(data){
+			var dat = document.getElementById("play");
+			dat.innerHTML = data;
+			$("#logger").text(data);
+		});
 	</script>
 </body>
 </html>
