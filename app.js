@@ -18,8 +18,8 @@ app.get('/',function(req,res){
 io.on('connection',function(socket){
 	socket.on('stream',function(data){
 		dato[i] = data;
-		i++;
 		socket.broadcast.emit('stream',dato[i]);
+		i++;
 	});
 });
 
