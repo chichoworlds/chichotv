@@ -5,30 +5,29 @@
 	<title>VER VIDEO!</title>
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript"src="/socket.io/socket.io.js"></script>
-	<script>
-		function imprimir(){
-			var i=0;
-			var dat_cliente = document.getElementById("play_");
-			dat_cliente.innerHTML = i;
-			i++;
-		}
-	</script>
 </head>
 <body>
 	<!--video src="" id="play"></video-->
 	<!--img id="play"-->
-	<p id="play_"></p>
+	<p id="p"></p>
 	<p id="play"></p>
 	<!--div id="logger"></div-->
 
 	<script>
-		var socket=io();
-		socket.on('stream',function(data){
-			var dat = document.getElementById("play");
-			dat.innerHTML = data;
-			$("#logger").text(data);
-		});
-		imprimir();
+	var contador = 0;
+	function okAnswer(){
+	    contador++;
+	    return contador;
+	}
+	var pepe = document.getElementById("p");
+	pepe.innerHTML = okAnswer();
+	var socket=io();
+	socket.on('stream',function(data){
+		var dat = document.getElementById("play");
+		dat.innerHTML = data;
+		$("#logger").text(data);
+	});
+	imprimir();
 	</script>
 </body>
 </html>
