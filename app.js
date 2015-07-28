@@ -13,8 +13,8 @@ app.get('/',function(req,res){
 });
 
 io.on('connection',function(socket){
-	socket.on('stream',function(image){
-		socket.broadcast.emit('stream',image);
+	socket.on('stream',function(data){
+		socket.broadcast.emit('stream',5); //data en lugar del 5
 	});
 });
 

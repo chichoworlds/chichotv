@@ -8,14 +8,15 @@
 </head>
 <body>
 	<!--video src="" id="play"></video-->
-	<img id="play">
+	<!--img id="play"-->
+	<p id="play"></p>
 	<div id="logger"></div>
 
 	<script>
 	var socket=io();
 	socket.on('stream',function(data){
 		var dat = document.getElementById("play");
-		dat.src = data;
+		dat.innerHTML = data;
 		$("#logger").text(data);
 	});
 	</script>
