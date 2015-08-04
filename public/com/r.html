@@ -28,7 +28,7 @@
 		i++;
 		//console.log("Data: "+data)
 		if (bufer.length == 25){
-			setInterval(reproducir(), 1000/24);
+			setInterval(function(){reproducir()}, 1000/24);
 		}
 	});
 	function reproducir(){
