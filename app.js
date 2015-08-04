@@ -18,7 +18,7 @@ app.get('/',function(req,res){
 io.on('connection',function(socket){
 	socket.on('stream',function(data){
 		dato[i] = data;
-		socket.broadcast.emit('stream',i);//data
+		socket.broadcast.emit('stream',"fede");//data
 		i++;
 	});
 });
