@@ -14,11 +14,16 @@
 	<!--div id="logger"></div-->
 
 	<script>
+	var bufer = [];
+	var i = 0;
 	var socket=io();
 	socket.on('stream',function(data){
 		var dat = document.getElementById("play");
-		dat.innerHTML = data;
-		$("#logger").text(data);
+		bufer[i]=data;
+		i++;
+		//dat.innerHTML = data;
+		//$("#logger").text(data);
+		console.log(bufer[i]);
 	});
 	</script>
 </body>
