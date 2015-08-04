@@ -5,32 +5,21 @@
 	<title>VER VIDEO!</title>
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript"src="/socket.io/socket.io.js"></script>
-	<script>
-		var contador = 9000;
-		function okAnswer(){
-		    contador++;
-		    return contador;
-		}
-	</script>
 </head>
 
 <body>
 	<!--video src="" id="play"></video-->
 	<!--img id="play"-->
-	<p id="p"></p>
 	<p id="play"></p>
 	<!--div id="logger"></div-->
 
 	<script>
-	var pepe = document.getElementById("p");
-	pepe.innerHTML = okAnswer();
 	var socket=io();
 	socket.on('stream',function(data){
 		var dat = document.getElementById("play");
 		dat.innerHTML = data;
 		$("#logger").text(data);
 	});
-	imprimir();
 	</script>
 </body>
 </html>
