@@ -17,7 +17,8 @@
 	var bufer = [];
 	var i = 0;
 	var socket=io();
-	//var dat = document.getElementById("play");
+	var frame = 0;
+	var dat = document.getElementById("play");
 		
 	socket.on('stream',function(data){
 		//dat.innerHTML = data;
@@ -27,20 +28,13 @@
 		i++;
 		//console.log("Data: "+data)
 		if (bufer.length == 25){
-			//reproducir(bufer);
-			console.log(i);
+			setTimeout(reproducir(), 1000/24));
 		}
 	});
-	function reproducir(dato){
-		var dat = document.getElementById("play");
-		var j = 0;
-		while (j < dato.length){
-			setTimeout(function(){
-				console.log(j);
-				dat.innerHTML = dato[j]; 
-			}, 1000/24);
-			j++;
-		} 
+	function reproducir(){
+		console.log(bufer[frame]);
+		dat.innerHTML = bufer[frame];
+		frame++;
 	}
 	</script>
 </body>
