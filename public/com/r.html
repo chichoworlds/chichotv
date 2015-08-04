@@ -27,7 +27,7 @@
 		console.log("Bufer i: "+bufer[i]);
 		i++;
 		//console.log("Data: "+data)
-		if (bufer.length == 25){
+		if (frame < bufer.length + 25){
 			setInterval(function(){reproducir()}, 1000/24);
 		}
 	});
