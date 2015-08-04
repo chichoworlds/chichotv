@@ -17,15 +17,31 @@
 	var bufer = [];
 	var i = 0;
 	var socket=io();
+	var dat = document.getElementById("play");
+		
 	socket.on('stream',function(data){
-		var dat = document.getElementById("play");
-		dat.innerHTML = data;
+		//dat.innerHTML = data;
 		//$("#logger").text(data);
 		bufer[i] = data;
 		console.log("Bufer i: "+bufer[i]);
 		i++
 		console.log("Data: "+data)
+		if (bufer.length > 25){
+			reproducir(bufer);
+		}
 	});
+	function reproducir(dato){
+		var i = 0;
+
+		while (i < dato.length){
+			setTimeout(function(){
+				dat.innerHTML = dato[i]; 
+			}, 1000/24);
+}
+			
+			i++
+		} 
+	}
 	</script>
 </body>
 </html>
