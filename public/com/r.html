@@ -28,9 +28,9 @@
 		i++;
 		//console.log("Data: "+data)
 		if (frame == bufer.length - 25){
-			setInterval(function(){reproducir()}, 1000/24);
+			var video = setInterval(function(){reproducir()}, 1000/24);
 		}else if(frame == bufer.length){
-			clearInterval();
+			clearInterval(video);
 		}
 	});
 	function reproducir(){

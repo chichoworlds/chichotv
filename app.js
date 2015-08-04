@@ -5,9 +5,6 @@ var io=require("socket.io")(http);
 var Log = require('log'),
 	log = new Log('debug');
 
-var dato = [];
-var i = 0;
-
 var port = process.env.PORT || 3000;
 
 app.use(express.static(__dirname + "/public"));
@@ -18,8 +15,7 @@ app.get('/',function(req,res){
 io.on('connection',function(socket){
 	socket.on('stream',function(data){
 		dato[i] = data;
-		socket.broadcast.emit('stream',i);//data
-		i++;
+		socket.broadcast.emit('stream',data);//
 	});
 });
 
