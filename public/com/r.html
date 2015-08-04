@@ -17,7 +17,7 @@
 	var bufer = [];
 	var i = 0;
 	var socket=io();
-	var dat = document.getElementById("play");
+	//var dat = document.getElementById("play");
 		
 	socket.on('stream',function(data){
 		//dat.innerHTML = data;
@@ -31,10 +31,11 @@
 		}
 	});
 	function reproducir(dato){
+		var dat = document.getElementById("play");
 		var i = 0;
-		console.log(dato[20]);
 		while (i < dato.length){
 			setTimeout(function(){
+				console.log(dato[i]);
 				dat.innerHTML = dato[i]; 
 			}, 1000/24);
 			i++;
