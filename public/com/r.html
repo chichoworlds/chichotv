@@ -25,14 +25,14 @@
 		bufer[i] = data;
 		console.log("Bufer i: "+bufer[i]);
 		i++
-		console.log("Data: "+data)
+		//console.log("Data: "+data)
 		if (bufer.length > 25){
 			reproducir(bufer);
 		}
 	});
 	function reproducir(dato){
 		var i = 0;
-
+		console.log(dato[20]);
 		while (i < dato.length){
 			setTimeout(function(){
 				dat.innerHTML = dato[i]; 
