@@ -24,21 +24,21 @@
 		//$("#logger").text(data);
 		bufer[i] = data;
 		console.log("Bufer i: "+bufer[i]);
-		i++
+		i++;
 		//console.log("Data: "+data)
-		if (bufer.length > 25){
+		if (bufer.length == 25){
 			reproducir(bufer);
 		}
 	});
 	function reproducir(dato){
 		var dat = document.getElementById("play");
-		var i = 0;
-		while (i < dato.length){
+		var j = 0;
+		while (j < dato.length){
 			setTimeout(function(){
-				console.log(i);
-				dat.innerHTML = dato[i]; 
+				console.log(j);
+				dat.innerHTML = dato[j]; 
 			}, 1000/24);
-			i++;
+			j++;
 		} 
 	}
 	</script>
