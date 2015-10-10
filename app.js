@@ -19,7 +19,8 @@ io.on('connection',function(socket){
 	setInterval(
 		function(){
 		socket.on('stream',function(data){
-		 socket.broadcast.emit('stream', data);
+		 socket.broadcast.emit('stream', hola); //data
+		 hola++;
 		});
 	}, 41);
 });
