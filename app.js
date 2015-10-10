@@ -20,6 +20,7 @@ io.on('connection',function(socket){
 	setInterval(
 		function(){
 		 socket.broadcast.emit('stream', hola); //data
+		 hola++;
 	}, 41);
 
 	});
