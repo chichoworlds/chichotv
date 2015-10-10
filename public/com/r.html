@@ -6,38 +6,17 @@
 	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript"src="/socket.io/socket.io.js"></script>
 </head>
-
 <body>
-	<!--video src="" id="play"></video-->
-	<!--img id="play"-->
-	<p id="play"></p>
-	<!--div id="logger"></div-->
+	<!--video width="640" height="480" src="../video/graph1.mp4" id="play" controls></video-->
+	<div id="logger"></div>
+
 
 	<script>
-	var bufer = [];
-	var i = 0;
+var vid = document.getElementById("logger");
 	var socket=io();
-	var frame = 0;
-	var dat = document.getElementById("play");
-		
-	socket.on('stream',function(data){
-		//dat.innerHTML = data;
-		//$("#logger").text(data);
-		bufer[i] = data;
-		console.log("Bufer i: "+bufer[i]);
-		i++;
-		//console.log("Data: "+data)
-		if (frame == bufer.length - 25){
-			var video = setInterval(function(){reproducir()}, 1000/24);
-		}else if(frame == bufer.length){
-			clearInterval(video);
-		}
+	socket.on('stream',function(curro){
+		vid.innerHTML = curro;
 	});
-	function reproducir(){
-		console.log(bufer[frame]);
-		dat.innerHTML = bufer[frame];
-		frame++;
-	}
 	</script>
 </body>
 </html>
