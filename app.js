@@ -19,7 +19,7 @@ io.on('connection',function(socket){
 	socket.on('stream',function(data){
 	setInterval(
 		function(){ socket.broadcast.emit('stream', data);
-	}, 1);
+	}, 500);
 
 	});
 });
