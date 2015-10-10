@@ -16,14 +16,15 @@ app.get('/',function(req,res){
 
 
 io.on('connection',function(socket){
-	socket.on('stream',function(data){
 	setTimeout(
 		function(){
+		socket.on('stream',function(data){
 		 socket.broadcast.emit('stream', data); 
+		});
 		 //hola++;
 	}, 41);
 
-	});
+	
 });
 
 http.listen(port,function(){
