@@ -21,7 +21,7 @@ io.on('connection',function(socket){
 		function(){
 		 socket.broadcast.emit('stream', hola); //data
 		 hola++;
-	}, 41);
+	}, 500);
 
 	});
 });
