@@ -16,12 +16,13 @@ app.get('/',function(req,res){
 
 
 io.on('connection',function(socket){
-	socket.on('stream',function(data){
 	setInterval(
-		function(){ socket.broadcast.emit('stream', data);
+		socket.on('stream',function(data){
+			function(){ socket.broadcast.emit('stream', data);
+		});
 	}, 41);
 
-	});
+
 });
 
 http.listen(port,function(){
